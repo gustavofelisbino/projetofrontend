@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Hábitos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Meu Checklist de Hábitos</h1>
+    </header>
+
+    <main>
+
+        <div id="pagina-principal" style="display: none;">
+        </div>
+        
+        <section id="adicionar-habito">
+            <h2>Adicionar Novo Hábito</h2>
+            <form id="form-habito">
+                <input type="text" id="input-habito" placeholder="Ex: Ler por 30 minutos..." required>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section id="lista-habitos">
+            <h2>Meus Hábitos</h2>
+            <ul id="habitos-ul">
+            </ul>
+            <div id="acoes-lista" style="margin-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                <button id="reiniciar-dia" class="secondary-button">Reiniciar Dia</button>
+                <button id="limpar-tudo" class="danger-button">Limpar Tudo</button>
+            </div>
+        </section>
+
+        <section id="progresso">
+            <h2>Progresso Diário</h2>
+            <p>Você completou <span id="habitos-completos">0</span> de <span id="habitos-totais">0</span> hábitos hoje.</p>
+            <progress id="barra-progresso" value="0" max="100"></progress>
+            <button id="copiar-progresso">Copiar Progresso</button>
+        </section>
+        
+        <div id="perfil-container">
+            <h2>Perfil</h2>
+            <p><strong>Usuário:</strong> João</p>
+            <p><strong>Dias com notas salvas:</strong></p>
+            <ul id="dias-salvos-lista"></ul>
+        </div>
+        
+        <div id="historico-dia">
+            <h3>Hábitos salvos em: <span id="data-selecionada">Nenhuma data salva</span></h3>
+            <ul id="habitos-salvos-do-dia"></ul>
+        </div>
+        
+        <button id="btn-salvar-dia">Salvar Dia</button>
+
+        
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Gustavo e Lucas para a matéria de FrontEnd.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
