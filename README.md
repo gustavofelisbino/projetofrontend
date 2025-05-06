@@ -20,7 +20,7 @@ Este projeto é uma aplicação web para o rastreamento de hábitos. Ele permite
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/projeto-habitos.git
+   git clone https://github.com/gustavofelisbino/projetofrontend.git
 2. Navegue até o diretório do projeto:
 cd projeto-habitos
 3. Abra o arquivo index.html em um navegador.
