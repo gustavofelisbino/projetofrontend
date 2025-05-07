@@ -6,12 +6,7 @@ const habitosTotais = document.getElementById("habitos-totais");
 const barraProgresso = document.getElementById("barra-progresso");
 const btnReiniciarDia = document.getElementById("reiniciar-dia");
 const btnLimparTudo = document.getElementById("limpar-tudo");
-const btnCopiarProgresso = document.getElementById("copiar-progresso");
 const acoesLista = document.getElementById("acoes-lista");
-const nomeUsuarioInput = document.getElementById("nome-usuario");
-const btnEntrar = document.getElementById("btn-entrar");
-const telaInicial = document.getElementById("tela-inicial");
-const paginaPrincipal = document.getElementById("pagina-principal");
 
 let habitos = [];
 
@@ -109,13 +104,6 @@ btnLimparTudo.addEventListener("click", () => {
     }
 });
 
-btnCopiarProgresso.addEventListener("click", () => {
-    const texto = `Hoje completei ${habitosCompletos.textContent} de ${habitosTotais.textContent} hábitos! 🎯`;
-    navigator.clipboard.writeText(texto).then(() => {
-        alert("Progresso copiado com sucesso!");
-    });
-});
-
 renderizarHabitos();
 
 let diasSalvos = JSON.parse(localStorage.getItem("diasSalvos")) || {};
@@ -166,27 +154,3 @@ function formatarData(data) {
 }
 
 document.getElementById("habitos-salvos-do-dia").style.display = "none";
-
-function atualizarDiasSalvos() {
-    const listaDias = document.getElementById("dias-salvos-lista");
-    if (!listaDias) return;
-    listaDias.innerHTML = "";
-
-    const datas = Object.keys(diasSalvos).sort().reverse();
-    datas.forEach(data => {
-        const li = document.createElement("li");
-        li.textContent = formatarData(data);
-        li.addEventListener("click", () => exibirHabitosDoDia(data));
-        listaDias.appendChild(li);
-    });
-}
-
-document.getElementById("btn-salvar-dia").addEventListener("click", salvarDiaAtual);
-
-function salvarDiaAtual() {
-    const hoje = new Date().toISOString().split("T")[0];
-    diasSalvos[hoje] = habitos.map(h => ({ ...h }));
-    localStorage.setItem("diasSalvos", JSON.stringify(diasSalvos));
-    atualizarDiasSalvos();
-    alert(`Dia ${hoje} salvo com sucesso!`);
-}
