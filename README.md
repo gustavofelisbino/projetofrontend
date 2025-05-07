@@ -1,6 +1,6 @@
-# Projeto de Rastreamento de Hábitos
+# Projeto de Controle de Hábitos Pessoais
 
-Este projeto é uma aplicação web para o rastreamento de hábitos. Ele permite aos usuários adicionar, editar e monitorar seus hábitos diários, visualizar o progresso e salvar o histórico dos hábitos. A interface é simples, responsiva e possui um design limpo, com um foco no uso fácil e intuitivo.
+Este projeto é uma aplicação web para o Controle de Hábitos Pessoais. Ele permite aos usuários adicionar, editar e monitorar seus hábitos diários, visualizar o progresso e salvar o histórico dos hábitos. A interface é simples, responsiva e possui um design limpo, com um foco no uso fácil e intuitivo.
 
 ## Funcionalidades
 
